@@ -1,0 +1,79 @@
+/* -----------------------------------------------
+				CSS Styles
+--------------------------------------------------
+
+    Project Name:Cristimiro | Personal Portfolio
+    Author: Cristimiro Roberto
+    Copyright: 2023
+
+--------------------------------------------------
+
+Table of Content
+
+	01. Body and Core
+  02. Header
+	03. Home
+	04. Project
+	05. Contact
+  06. Not-Found
+	07. Preloader Page
+  08. Footer
+  09. Animations
+----------------------------------- */
+
+/* -----------------------------------
+		01. Body and Core Css
+----------------------------------- */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import 'partials/colors';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background-color: var(--off-dark);
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    padding-right: 4px;
+    width: 10px;
+    height: 4px !important;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: var(--background);
+    border: 4px solid var(--background);
+  }
+}
+svg,
+img {
+  width: 100%;
+  height: 100%;
+}
+@import 'partials/layout';
+@import 'partials/typography';
+@import 'partials/spacing';
+@import 'partials/button';
+@import 'partials/input';
+
+@import 'partials/header';
+@import 'partials/home';
+@import 'partials/post';
+@import 'partials/contact';
+@import 'partials/notfound';
+@import 'partials/preloader';
+@import 'partials/footer';
+@import 'partials/animation';
