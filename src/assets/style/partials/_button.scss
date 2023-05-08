@@ -1,1 +1,49 @@
 /* ----------- Buttons -------------*/
+
+button,
+.btn {
+  appearance: none;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 16px;
+  transition: 0.7s ease;
+  outline: none;
+  cursor: pointer;
+}
+.btn-sm {
+  padding: 16px 32px;
+  @include responsive(s) {
+    padding: 14px 24px;
+  }
+}
+.btn-md {
+  padding: 16px 40px;
+  @include responsive(s) {
+    padding: 14px 32px;
+  }
+}
+
+.btn-primary {
+  color: var(--white);
+  background: var(--gradient-secondary);
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(151, 71, 255, 0.09);
+    opacity: 0.5;
+  }
+}
+.btn-outline-white {
+  color: var(--title);
+  border: 1px solid var(--title);
+  &:hover {
+    color: var(--off-white);
+    background-color: var(--title);
+  }
+}
+.badge {
+  color: var(--secondary-light);
+  @include typeface-2(p3, desktop);
+  border-radius: 16px;
+  border: 1px solid var(--secondary-light);
+  padding: 8px 16px;
+}

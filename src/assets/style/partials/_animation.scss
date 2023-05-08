@@ -1,3 +1,92 @@
 /* -----------------------------------
 		09. Animations
 ----------------------------------- */
+/* --------- Hero Section ----------*/
+.ball-1 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: globe 100s linear infinite;
+}
+.ball-2 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: globe 300s linear infinite;
+}
+.glob {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: globe 50s linear infinite;
+}
+@keyframes globe {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ------------ Skill  -------------*/
+.skill-1 {
+  animation: skill-1 5s ease infinite alternate;
+}
+.skill-2 {
+  animation: skill-2 10s ease infinite alternate;
+}
+@keyframes skill-1 {
+  0% {
+    transform: translate3d(-240px, 0, 0);
+  }
+  100% {
+    transform: translate3d(240, 0, 0);
+  }
+}
+@keyframes skill-2 {
+  0% {
+    transform: translate3d(128px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-128px, 0, 0);
+  }
+}
+/* ---------- about Section ------------*/
+
+.images-1 {
+  img {
+    animation: images-1 10s ease infinite alternate;
+  }
+}
+.images-2 {
+  img {
+    animation: images-2 20s ease infinite alternate;
+  }
+}
+@keyframes images-1 {
+  0% {
+    transform: translate3d(0, -240px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes images-2 {
+  0% {
+    transform: translate3d(0, -328px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* ------------ CTA  -------------*/
+.Vector {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: rocket 4s ease infinite alternate;
+}
+@keyframes rocket {
+  0% {
+    transform: translate3d(0, 4px, 0);
+  }
+  100% {
+    transform: translate3d(0, -32px, 0);
+  }
+}

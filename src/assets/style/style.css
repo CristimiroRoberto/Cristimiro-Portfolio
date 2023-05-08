@@ -1432,7 +1432,69 @@ ul {
   padding-bottom: 128px !important;
 }
 
-/* ----------- Buttons -------------*/ /* ----------- Input -------------*/ /* -----------------------------------
+/* ----------- Buttons -------------*/
+button,
+.btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 16px;
+  transition: 0.7s ease;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-sm {
+  padding: 16px 32px;
+}
+@media screen and (max-width: 884px) {
+  .btn-sm {
+    padding: 14px 24px;
+  }
+}
+
+.btn-md {
+  padding: 16px 40px;
+}
+@media screen and (max-width: 884px) {
+  .btn-md {
+    padding: 14px 32px;
+  }
+}
+
+.btn-primary {
+  color: var(--white);
+  background: var(--gradient-secondary);
+}
+.btn-primary:hover {
+  box-shadow: 0px 4px 4px rgba(151, 71, 255, 0.09);
+  opacity: 0.5;
+}
+
+.btn-outline-white {
+  color: var(--title);
+  border: 1px solid var(--title);
+}
+.btn-outline-white:hover {
+  color: var(--off-white);
+  background-color: var(--title);
+}
+
+.badge {
+  color: var(--secondary-light);
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 152%;
+  border-radius: 16px;
+  border: 1px solid var(--secondary-light);
+  padding: 8px 16px;
+}
+
+/* ----------- Input -------------*/ /* -----------------------------------
 		02. Header
 ----------------------------------- */
 .header-active {
@@ -1713,6 +1775,44 @@ header.header-menu a.logo {
   opacity: 1;
 }
 
+.blur-page-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  content: "";
+  background-color: var(--primary-normal);
+  filter: blur(340px);
+  z-index: -1;
+}
+@media screen and (max-width: 884px) {
+  .blur-page-1 {
+    filter: blur(200px);
+    width: 128px;
+    height: 128px;
+  }
+}
+
+.blur-page-2 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  content: "";
+  background-color: var(--primary-normal);
+  filter: blur(340px);
+  z-index: -1;
+}
+@media screen and (max-width: 884px) {
+  .blur-page-2 {
+    filter: blur(200px);
+    width: 128px;
+    height: 128px;
+  }
+}
+
 /* ------------- Hero --------------*/
 .hero {
   position: relative;
@@ -1835,6 +1935,239 @@ header.header-menu a.logo {
   }
 }
 
+/* ----------- about  -------------*/
+.check .check-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--primary-normal);
+}
+.check .check-circle img {
+  width: 12px;
+  height: 12px;
+}
+.check .check-text {
+  color: var(--title);
+}
+
+.picture {
+  padding-left: 40px;
+}
+@media screen and (max-width: 884px) {
+  .picture {
+    padding-left: 0;
+  }
+}
+
+.blur-1,
+.blur-2 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  z-index: 20;
+}
+@media screen and (max-width: 884px) {
+  .blur-1,
+  .blur-2 {
+    height: 44px;
+  }
+}
+
+.blur-1 {
+  top: 0;
+  background: var(--blur-1);
+}
+
+.blur-2 {
+  bottom: 0;
+  background: var(--blur-2);
+}
+
+.grayscale {
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: 0.7s ease;
+}
+
+.grayscale:hover {
+  filter: grayscale(0%);
+}
+
+.images-1,
+.images-2 {
+  max-height: 620px;
+  overflow-y: hidden;
+}
+.images-1 img,
+.images-2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+@media screen and (max-width: 884px) {
+  .images-1,
+  .images-2 {
+    max-height: 520px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .images-1,
+  .images-2 {
+    max-height: 420px;
+  }
+}
+
+/* -------- Skill Section ----------*/
+.skill {
+  width: 100vw;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.skill-1 {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+
+.skill-2 {
+  margin-top: 24px;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+
+.skill-box {
+  width: auto;
+  height: auto;
+  border-radius: 16px;
+  padding: 16px 32px;
+  background-color: var(--background);
+}
+.skill-box svg {
+  width: 32px;
+  height: 32px;
+}
+.skill-box p {
+  white-space: nowrap !important;
+}
+@media screen and (max-width: 884px) {
+  .skill-box {
+    text-align: center;
+    padding: 12px 16px;
+  }
+}
+
+/* ------- Call-to-action ---------*/
+.call-to-action .wrapper {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 884px) {
+  .call-to-action .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.call-to-action .wrapper .rocket {
+  overflow: hidden;
+  position: relative;
+  right: -56px;
+  width: auto;
+  min-width: 312px;
+  height: auto;
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  padding: 32px;
+  background-color: var(--background);
+  background-image: url("./../svg/star.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: 99;
+}
+.call-to-action .wrapper .rocket svg {
+  width: 100%;
+  height: auto;
+}
+.call-to-action .wrapper .rocket::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 88px;
+  content: "";
+  background-color: var(--primary-normal);
+  filter: blur(76px);
+}
+.call-to-action .wrapper .rocket::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 96px;
+  height: 72px;
+  content: "";
+  background-color: var(--primary-normal);
+  filter: blur(64px);
+}
+@media screen and (max-width: 884px) {
+  .call-to-action .wrapper .rocket {
+    right: 0;
+    bottom: -72px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .call-to-action .wrapper .rocket {
+    width: auto;
+    min-width: auto;
+    max-width: 70%;
+  }
+}
+.call-to-action .wrapper .content-box {
+  overflow: hidden;
+  position: relative;
+  max-width: 758px;
+  width: auto;
+  height: auto;
+  padding: 56px 56px 56px 128px;
+  border-radius: 16px;
+  background-color: var(--background);
+  background-image: url("./../svg/star.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media screen and (max-width: 884px) {
+  .call-to-action .wrapper .content-box {
+    height: auto;
+    max-height: 100%;
+    padding: 96px 32px 32px 32px;
+  }
+}
+.call-to-action .wrapper .content-box::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 148px;
+  height: 148px;
+  content: "";
+  background-color: var(--primary-normal);
+  filter: blur(146px);
+}
+.call-to-action .wrapper .content-box::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 226px;
+  height: 200px;
+  content: "";
+  background-color: var(--primary-normal);
+  filter: blur(180px);
+}
+
 /* -----------------------------------
 	  04. Project
 ----------------------------------- */
@@ -1869,4 +2202,96 @@ footer svg {
 
 /* -----------------------------------
 		09. Animations
------------------------------------ *//*# sourceMappingURL=style.css.map */
+----------------------------------- */
+/* --------- Hero Section ----------*/
+.ball-1 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: globe 100s linear infinite;
+}
+
+.ball-2 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: globe 300s linear infinite;
+}
+
+.glob {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: globe 50s linear infinite;
+}
+
+@keyframes globe {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ------------ Skill  -------------*/
+.skill-1 {
+  animation: skill-1 5s ease infinite alternate;
+}
+
+.skill-2 {
+  animation: skill-2 10s ease infinite alternate;
+}
+
+@keyframes skill-1 {
+  0% {
+    transform: translate3d(-240px, 0, 0);
+  }
+  100% {
+    transform: translate3d(240, 0, 0);
+  }
+}
+@keyframes skill-2 {
+  0% {
+    transform: translate3d(128px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-128px, 0, 0);
+  }
+}
+/* ---------- about Section ------------*/
+.images-1 img {
+  animation: images-1 10s ease infinite alternate;
+}
+
+.images-2 img {
+  animation: images-2 20s ease infinite alternate;
+}
+
+@keyframes images-1 {
+  0% {
+    transform: translate3d(0, -240px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes images-2 {
+  0% {
+    transform: translate3d(0, -328px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* ------------ CTA  -------------*/
+.Vector {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: rocket 4s ease infinite alternate;
+}
+
+@keyframes rocket {
+  0% {
+    transform: translate3d(0, 4px, 0);
+  }
+  100% {
+    transform: translate3d(0, -32px, 0);
+  }
+}/*# sourceMappingURL=style.css.map */
