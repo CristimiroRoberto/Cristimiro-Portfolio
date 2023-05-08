@@ -85,6 +85,10 @@ Table of Content
     linear-gradient(360deg, #0f172a 0%, rgba(5, 6, 7, 0) 100%);
 }
 
+.success {
+  color: var(--success);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1494,7 +1498,93 @@ button,
   padding: 8px 16px;
 }
 
-/* ----------- Input -------------*/ /* -----------------------------------
+/* ----------- Input -------------*/
+fieldset {
+  border: 0;
+}
+
+@media screen and (max-width: 620px) {
+  form {
+    margin-top: 48px;
+  }
+}
+
+input,
+textarea {
+  width: 100%;
+  color: var(--body);
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 144%;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  padding: 20px 24px;
+  outline: none;
+  background-color: transparent;
+  transition: 0.7s ease;
+  z-index: 999;
+}
+input:focus,
+textarea:focus {
+  border: 1px solid var(--primary-normal);
+}
+
+textarea {
+  min-height: 180px;
+  resize: none;
+}
+
+.form-control {
+  position: relative;
+  background-color: transparent;
+}
+.form-control:not(:last-child) {
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 884px) {
+  .form-control:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+label {
+  display: block;
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  color: var(--label);
+  transition: 0.7s ease;
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 152%;
+  z-index: -1;
+}
+
+input:focus ~ label,
+textarea:focus ~ label {
+  transition: 0.7s ease;
+  transform: translateY(-16px);
+  font-size: 14px;
+  line-height: 152%;
+}
+input:focus ~ label span,
+textarea:focus ~ label span {
+  display: none;
+}
+
+span.error-input {
+  display: inline-block;
+  color: var(--danger);
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 152%;
+  margin-top: 8px;
+}
+
+/* -----------------------------------
 		02. Header
 ----------------------------------- */
 .header-active {
@@ -2174,9 +2264,67 @@ header.header-menu a.logo {
 /* -----------------------------------
 			05. Contact
 ----------------------------------- */
+.contact .info-contact .icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  border: 1px solid var(--primary-dark);
+  background-color: var(--input);
+}
+.contact .info-contact .icon-box svg {
+  width: 20px;
+  height: auto;
+}
+@media screen and (max-width: 884px) {
+  .contact .info-contact .icon-box {
+    width: 48px;
+    height: 48px;
+  }
+  .contact .info-contact .icon-box svg {
+    width: 16px;
+    height: auto;
+  }
+}
+.contact .info-contact p {
+  color: var(--title);
+}
+@media screen and (max-width: 884px) {
+  .contact {
+    margin-top: 32px;
+  }
+}
+
 /* -----------------------------------
 		06. Not-Found
 ----------------------------------- */
+.notFound {
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+.notFound .content {
+  text-align: center;
+}
+.notFound .content h1 {
+  background-image: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 152px;
+}
+@media screen and (max-width: 884px) {
+  .notFound .content h1 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 128px;
+    font-weight: 800;
+    line-height: 96%;
+    text-transform: uppercase;
+  }
+}
+.notFound .content h5 {
+  max-width: 360px;
+}
+
 /* -----------------------------------
 	07. Preloader Page
 ----------------------------------- */

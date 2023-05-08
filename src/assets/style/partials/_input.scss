@@ -1,1 +1,66 @@
 /* ----------- Input -------------*/
+fieldset {
+  border: 0;
+}
+form {
+  @include responsive(xs) {
+    margin-top: 48px;
+  }
+}
+input,
+textarea {
+  width: 100%;
+  color: var(--body);
+  @include typeface-2(p1, desktop);
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  padding: 20px 24px;
+  outline: none;
+  background-color: transparent;
+  transition: 0.7s ease;
+  z-index: 999;
+  &:focus {
+    border: 1px solid var(--primary-normal);
+  }
+}
+textarea {
+  min-height: 180px;
+  resize: none;
+}
+.form-control {
+  position: relative;
+  background-color: transparent;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+    @include responsive(s) {
+      margin-bottom: 16px;
+    }
+  }
+}
+label {
+  display: block;
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  color: var(--label);
+  transition: 0.7s ease;
+  @include typeface-2(p2, desktop);
+  z-index: -1;
+}
+
+input:focus ~ label,
+textarea:focus ~ label {
+  transition: 0.7s ease;
+  transform: translateY(-16px);
+  @include typeface-2(p2, mobile);
+  span {
+    display: none;
+  }
+}
+
+span.error-input {
+  display: inline-block;
+  color: var(--danger);
+  @include typeface-2(p2, desktop);
+  margin-top: 8px;
+}
