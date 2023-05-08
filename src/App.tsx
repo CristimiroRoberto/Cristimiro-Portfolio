@@ -1,8 +1,9 @@
-function App() {
+import { Paths } from "./store/Routes"
 
+function App() {
   return (
     <>
-      
+      <Paths/>
     </>
   )
 }

@@ -1,4 +1,4 @@
-export const Post = () =>{
+export const Project = () =>{
 
   return(
     <>
