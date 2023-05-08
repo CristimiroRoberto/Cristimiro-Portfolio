@@ -1,3 +1,231 @@
 /* -----------------------------------
 			02. Header
 ----------------------------------- */
+.border {
+  border: 1px solid red;
+}
+.social-media-links {
+  ul {
+    column-gap: 16px;
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+        transition: 0.7s ease;
+        svg {
+          transition: 0.7s ease;
+          width: 24px;
+          height: 24px;
+        }
+        &:hover {
+          svg {
+            stroke: var(--primary-dark);
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+.title-section {
+  margin-top: 18px;
+  margin-bottom: 72px;
+  h4 {
+    display: inline-block;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      width: 100%;
+      height: 1px;
+      content: '';
+      margin-top: 16px;
+      background: var(--gradient-tertial);
+    }
+  }
+  @include responsive(s) {
+    margin-top: 16px;
+    margin-bottom: 56px;
+  }
+}
+.card {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 2px solid var(--line);
+  padding: 72px 16px 32px 16px;
+  transition: 0.7s ease;
+  cursor: pointer;
+  .icon-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background-color: var(--background);
+    transition: 0.7s ease;
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-top: 4px;
+    }
+  }
+  .panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  .blur-card {
+    position: absolute;
+    width: 104px;
+    height: 104px;
+    content: '';
+    background-color: var(--primary-normal);
+    filter: blur(96px);
+    opacity: 0;
+    transition: 0.7s ease;
+  }
+  &:hover {
+    border-radius: 0px;
+    border-image: var(--gradient-tertial) 1;
+    transform: translate3d(0, -8px, 0);
+    .icon-card {
+      border: 2px solid var(--primary-dark);
+    }
+    .blur-card {
+      opacity: 1;
+    }
+  }
+}
+/* ------------- Hero --------------*/
+.hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  border-bottom: 1px solid var(--off-dark);
+  background-image: url('./../svg/star-hero.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 352px;
+    height: 352px;
+    content: '';
+    background-color: var(--primary-normal);
+    filter: blur(300px);
+  }
+  .inner-text {
+    margin-top: 128px;
+    h1 {
+      color: var(--title);
+      position: relative;
+      display: inline-block;
+      &::before {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        height: 1px;
+        content: '';
+        margin-top: 32px;
+        border-radius: 8px;
+        background: var(--gradient-tertial);
+        transition: 0.7s ease;
+      }
+    }
+    ul.stack {
+      column-gap: 40px;
+      li {
+        position: relative;
+        color: var(--body);
+        @include typeface-2(p1, desktop);
+        margin-left: 24px;
+        &::before {
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          content: '';
+          border-radius: 50%;
+          background-color: var(--body);
+          margin-left: -24px;
+        }
+      }
+    }
+  }
+
+  .globe {
+    svg {
+      width: 140%;
+      height: 140%;
+      @include responsive(s) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  @include responsive(s) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .inner-text {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 152px;
+      text-align: center;
+    }
+    .globe {
+      padding-top: 24px;
+    }
+  }
+  @include responsive(xs) {
+    .inner-text {
+      margin-top: 128px;
+      h1 {
+        margin-bottom: 40px !important;
+        &::before {
+          margin-top: 8px;
+        }
+      }
+      .stack {
+        row-gap: 16px;
+        flex-direction: column;
+        align-items: start;
+        li {
+          span {
+            &:nth-child(3) {
+              display: none;
+            }
+          }
+        }
+      }
+      .social-media-links {
+        margin-top: 48px !important;
+      }
+    }
+    .globe {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
