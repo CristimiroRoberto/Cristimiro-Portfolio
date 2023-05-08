@@ -1,3 +1,19 @@
 /* -----------------------------------
 			08. Footer
 ----------------------------------- */
+footer {
+  width: 100%;
+  height: auto;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  svg {
+    width: 24px;
+    height: auto;
+  }
+  @include responsive(s) {
+    .container {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+  }
+}

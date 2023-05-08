@@ -1,3 +1,154 @@
 /* -----------------------------------
 		02. Header
 ----------------------------------- */
+
+.header-active {
+  height: 72px !important;
+  background: rgba(20, 31, 56, 0.4);
+  backdrop-filter: blur(24px);
+  transition: 0.7s ease;
+}
+header.header-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 104px;
+  z-index: 99;
+  transition: 0.7s ease;
+  a.logo {
+    max-width: 56px;
+    max-height: 56px;
+  }
+  @include responsive(s) {
+    height: 72px;
+    a.logo {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.menu-desktop {
+  column-gap: 72px;
+  a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: var(--title);
+    @include typeface-2(p1, desktop);
+    padding: 24px;
+    transition: 0.7s ease;
+    &::before {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      margin-left: -24px;
+      content: '';
+      border-radius: 50%;
+      background-color: var(--primary-normal);
+      transition: 0.7s ease;
+    }
+    &:hover {
+      color: var(--secondary-light);
+      &::before {
+        margin-left: 8px;
+      }
+    }
+  }
+  @include responsive(s) {
+    display: none;
+  }
+}
+/* ----------------- Nav Mobile -------------------*/
+.menu-mobile-active {
+  transition: 0.7s ease;
+  left: 0 !important;
+}
+.menu-mobile {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(20, 31, 56, 0.4);
+  backdrop-filter: blur(24px);
+  padding: 0 4%;
+  transition: 0.7s ease;
+  z-index: 99;
+  li {
+    border-bottom: 1px solid var(--line);
+    a {
+      width: 100%;
+      height: 100%;
+      color: var(--title);
+      padding: 24px 16px 24px 0;
+      @include typeface-2(p1, desktop);
+      transition: 1s ease;
+      &:hover {
+        background: rgba(6, 9, 15, 0.1);
+        padding: 24px 16px 24px 24px;
+      }
+    }
+  }
+  @include responsive(s) {
+    display: block;
+  }
+}
+/* ---------------- Box Hamburger -----------------*/
+.menu-hamburger {
+  display: none;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  &::after,
+  &::before {
+    display: block;
+    position: absolute;
+    height: 2px;
+    content: '';
+    border-radius: 4px;
+    background-color: var(--title);
+    transition: 0.7s ease;
+    transform: translate(-50%, -50%);
+  }
+  &::after {
+    top: 35%;
+    left: 40%;
+    width: 70%;
+  }
+  &::before {
+    top: 50%;
+    left: 60%;
+    width: 65%;
+  }
+  &:hover {
+    &::after,
+    &::before {
+      background-color: var(--primary-normal);
+    }
+  }
+  @include responsive(s) {
+    display: block;
+  }
+}
+.menu-hamburger-active {
+  &::after {
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    transition: 1s ease;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+
+  &::before {
+    top: 50%;
+    left: 50%;
+    transition: 1s ease;
+    width: 65%;
+    transform: translate(-50%, -50%) rotate(-315deg);
+  }
+}

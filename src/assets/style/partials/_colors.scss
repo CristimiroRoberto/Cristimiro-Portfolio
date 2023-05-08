@@ -1,1 +1,66 @@
 /* ----------- Colors -------------*/
+:root {
+  //Gray--Scale
+  --white: #ffffff;
+  --title: #cbdcf1;
+  --body: #94a3bd;
+  --label: #64748b;
+  --placeholder: #94a3b8;
+  --line: #1b2a4d;
+  --input: #19203b;
+  --off-dark: #0f172a;
+  --background: #141f38;
+
+  //Primary Colors
+  --primary-dark: #4c1d95;
+  --primary-normal: #7c3aed;
+  --primary-light: #c4b5fd;
+
+  //Secondary Colors
+  --secondary-dark: #581c87;
+  --secondary-normal: #7e22ce;
+  --secondary-light: #a78bfa;
+
+  //Auxiliary Colors
+  --danger: #f43f5e;
+  --warning: #ffbe0b;
+  --success: #10b981;
+
+  //Shadow
+  --shadow-card: 0px 0px 32px rgba(17, 17, 17, 0.24);
+  --shadow-card-hover: 0px 0px 32px rgba(124, 58, 237, 0.32);
+  --shadow-card-hover-s: 0px 0px 24px rgba(124, 58, 237, 0.24);
+
+  //Gradient Colors
+  --gradient-primary: radial-gradient(
+    122.37% 80.39% at 73.06% 8.85%,
+    #c4b5fd 0%,
+    #4c1d95 46.88%,
+    #7c3aed 88.02%
+  );
+  --gradient-secondary: linear-gradient(
+    105.83deg,
+    #581c87 31.27%,
+    #7e22ce 64.07%,
+    #a78bfa 106.84%,
+    #652f9a 127.87%,
+    #a78bfa 127.88%
+  );
+
+  --gradient-tertial: linear-gradient(
+    270deg,
+    #7c3aed -1.61%,
+    rgba(124, 58, 237, 0.8) 20.62%,
+    rgba(124, 58, 237, 0.6) 41.26%,
+    rgba(124, 58, 237, 0.4) 57.89%,
+    rgba(124, 58, 237, 0.2) 77.24%,
+    rgba(124, 58, 237, 0.1) 99.31%
+  );
+  --blur-1: linear-gradient(180deg, #0f172a 0%, rgba(5, 6, 7, 0) 100%),
+    linear-gradient(180deg, #0f172a 0%, rgba(5, 6, 7, 0) 100%),
+    linear-gradient(180deg, #0f172a 0%, rgba(5, 6, 7, 0) 100%);
+
+  --blur-2: linear-gradient(360deg, #0f172a 0%, rgba(5, 6, 7, 0) 100%),
+    linear-gradient(360deg, #0f172a 0%, rgba(5, 6, 7, 0) 100%),
+    linear-gradient(360deg, #0f172a 0%, rgba(5, 6, 7, 0) 100%);
+}
