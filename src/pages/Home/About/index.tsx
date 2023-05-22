@@ -19,14 +19,25 @@ export const About = () => {
           </div>
           <div className="row">
             <div className="grid-6">
-              <p className="p1" data-aos="fade-up">
-             I'm a passionate frontend developer who loves creating amazing digital experiences with a focus on web accessibility, usability, and UI design. I have skills in HTML, CSS (including SCSS), and JavaScript.<br>
-          <br>
-              I have experience with modern frameworks like React JS and have been dedicated to enhancing my skills in Next.js.<br>
-  <br>
-Additionally, I use Tailwind CSS, which allows me to efficiently create responsive and visually appealing user interfaces. As a UI design enthusiast, I strive to apply design principles, create intuitive layouts, and care about visual aesthetics in all my projects.<br>
-  <br>
-I constantly seek to learn and stay updated on the latest industry trends and best practices in UI design. I believe in balancing functionality with aesthetics and work collaboratively with multidisciplinary teams to create exceptional digital solutions.</p>
+                <div  data-aos="fade-up">
+                  <p className="p1">
+                     I'm a passionate frontend developer who loves creating amazing digital experiences with a focus on web 
+                    accessibility, usability, and UI design. I have skills in HTML, CSS (including SCSS), and JavaScript.<br>
+                  </p>
+                  <p className="p1">
+                     I have experience with modern frameworks like React JS and have been dedicated to enhancing my skills in 
+                      Next.js.<br>
+                  </p>
+                  <p className="p1">
+                    Additionally, I use Tailwind CSS, which allows me to efficiently create responsive and visually appealing user 
+                    interfaces. As a UI design enthusiast, I strive to apply design principles, create intuitive layouts, and care 
+                    about visual aesthetics in all my projects.
+                  <p className="p1">
+                    I constantly seek to learn and stay updated on the latest industry trends and best practices in UI design. 
+                    I believe in balancing functionality with aesthetics and work collaboratively with multidisciplinary teams 
+                    to create exceptional digital solutions.
+                  </p>
+                </div>
               <div className="check mt-5">
                 <div className="check-item flex mb-3"   data-aos="fade-up"
                   data-aos-delay="100">
