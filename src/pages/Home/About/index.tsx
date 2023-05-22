@@ -21,11 +21,11 @@ export const About = () => {
             <div className="grid-6">
               <p className="p1" data-aos="fade-up">
              I'm a passionate frontend developer who loves creating amazing digital experiences with a focus on web accessibility, usability, and UI design. I have skills in HTML, CSS (including SCSS), and JavaScript.
-
-I have experience with modern frameworks like React JS and have been dedicated to enhancing my skills in Next.js.
-
+          <br>
+              I have experience with modern frameworks like React JS and have been dedicated to enhancing my skills in Next.js.
+  <br>
 Additionally, I use Tailwind CSS, which allows me to efficiently create responsive and visually appealing user interfaces. As a UI design enthusiast, I strive to apply design principles, create intuitive layouts, and care about visual aesthetics in all my projects.
-
+  <br>
 I constantly seek to learn and stay updated on the latest industry trends and best practices in UI design. I believe in balancing functionality with aesthetics and work collaboratively with multidisciplinary teams to create exceptional digital solutions.</p>
               <div className="check mt-5">
                 <div className="check-item flex mb-3"   data-aos="fade-up"
