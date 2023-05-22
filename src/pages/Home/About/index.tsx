@@ -24,7 +24,7 @@ export const About = () => {
                      I'm a passionate frontend developer who loves creating amazing digital experiences with a focus on web 
                     accessibility, usability, and UI design. I have skills in HTML, CSS (including SCSS), and JavaScript.<br>
                   </p>
-                  <p className="p1">
+                  <p className="p1 mt-1">
                      I have experience with modern frameworks like React JS and have been dedicated to enhancing my skills in 
                       Next.js.<br>
                   </p>
